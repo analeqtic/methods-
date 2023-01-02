@@ -1,0 +1,30 @@
+using System;
+
+namespace Program
+{
+    class Program3
+    {
+        static void Main(string[] args)
+        {
+            string sentence;
+            int wordCount;
+
+            Console.WriteLine("Input your sentence: ");
+            sentence = Console.ReadLine();
+
+            wordCount = CountWords(sentence);
+
+            Console.WriteLine("The number of words in the sentence is: " + wordCount);
+
+            Console.ReadKey();
+        }
+        static int CountWords(string sentence)
+        {
+            int wordCount;
+
+            wordCount = sentence.Split(' ').Length;
+            return wordCount;
+        }
+        
+    }   
+}
